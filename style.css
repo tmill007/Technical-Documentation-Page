@@ -1,0 +1,124 @@
+:root {
+    --color-gray-bg: rgba(233, 231, 231, 0.3);
+    --color-text: rgb(48, 47, 47);
+    --color-header: rgb(14, 13, 13);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    line-height: 1.6;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: justify;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 300px 80%;
+    grid-template-areas:
+        "nav   nav"
+        "main  main";
+}
+
+code p {
+    background: rgba(218, 216, 216, 0.35);
+    padding: 15px;
+    border-radius: 4px;
+    margin-left: 20px;
+    white-space: pre-line;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+}
+
+/* MEDIA QUERY */
+
+@media only screen and (min-width: 800px){
+    
+    
+}/* MEDIA QUERY END*/
+
+
+/* NAVIGATION & HEADING */
+
+#navbar {
+    grid-area: nav;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr;
+    align-items: center;
+    grid-template-areas: 
+        "header"
+        "nav-links";
+}
+
+#main-container {
+    grid-area: main;
+}
+
+header {
+    grid-area: header;
+    font-size: 1.8em;
+    font-weight: 800;
+    margin: auto;
+    padding: 0.4em 0px;
+    text-transform: uppercase;
+    letter-spacing: 1px
+}
+
+#nav-links-container {
+    grid-area: nav-links;
+    max-height: 200px;
+    overflow-y: scroll;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;    
+    border: 3px inset #4d4c4c;
+    
+}
+
+.nav-links {
+    padding: 0.5em 1.5em;
+    border: 1px dotted #818181;
+}
+
+a {
+    text-decoration: none;
+    color: #333333;
+    transition-duration: 80ms;
+    transition-timing-function: ease-in-out;
+    
+}
+
+.nav-links a:hover {
+    font-size: 1.1em;
+    color: black;
+    font-weight: 700;
+}
+
+/* MAIN CONTAINER */
+
+#main-container {
+    padding: 0.5em 1.5em;
+}
+
+.section-heading {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* ARTICLE SECTION */
+
+article {
+    padding-left: 1em;
+}
+
+article ul {
+    display: grid;
+    grid-gap: 15px;
+}
+
