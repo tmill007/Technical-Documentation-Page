@@ -12,12 +12,14 @@
 
 body {
     margin: 0;
-    font-family: Georgia, Times, 'Times New Roman', serif;
-    line-height: 1.6;
-    font-size: 16px;
+    font-family: 'Open Sans', Arial, sans-serif;
+    line-height: 1.5;
     font-weight: 300;
-    text-align: justify;
+    color: #424347;
+    font-size: 16px;
+    background-color: #ffffff;
     display: grid;
+    text-align: justify;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 300px 80%;
     grid-template-areas:
@@ -29,49 +31,35 @@ code p {
     background: rgba(218, 216, 216, 0.35);
     padding: 15px;
     border-radius: 4px;
-    margin-left: 20px;
+    margin-left: 30px;
     white-space: pre-line;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 12px;
+    font-size: 14px;
 }
-
-/* MEDIA QUERY */
-
-@media only screen and (min-width: 800px){
-    
-    
-}/* MEDIA QUERY END*/
-
 
 /* NAVIGATION & HEADING */
 
 #navbar {
     grid-area: nav;
-    display: grid;
-    grid-template-rows: auto 1fr;
-    grid-template-columns: 1fr;
-    align-items: center;
-    grid-template-areas: 
-        "header"
-        "nav-links";
+    
 }
 
-#main-container {
+#main-doc {
     grid-area: main;
 }
 
-header {
+.navbar-header {
     grid-area: header;
     font-size: 1.8em;
     font-weight: 800;
-    margin: auto;
+    text-align: center;
     padding: 0.4em 0px;
     text-transform: uppercase;
-    letter-spacing: 1px
+    letter-spacing: 1px;
+    color: black;
 }
 
 #nav-links-container {
-    grid-area: nav-links;
     max-height: 200px;
     overflow-y: scroll;
     list-style: none;
@@ -102,19 +90,21 @@ a {
 
 /* MAIN CONTAINER */
 
-#main-container {
+#main-doc {
     padding: 0.5em 1.5em;
 }
 
 .section-heading {
-    font-weight: 700;
-    letter-spacing: 1px;
+    font-size: 28px;
+    font-weight: 500;
+    color: black;
+    margin-top: 20px;
 }
 
 /* ARTICLE SECTION */
 
 article {
-    padding-left: 1em;
+    padding-left: 20px;
 }
 
 article ul {
@@ -122,3 +112,43 @@ article ul {
     grid-gap: 15px;
 }
 
+/* MEDIA QUERY */
+
+@media only screen and (min-width: 800px){
+    body {
+        grid-template-columns: 350px 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+        "nav  main"
+        "nav  main";
+    }
+
+    #navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 350px;
+        height: 100%;
+        border-right: 3px solid #afaaaa;
+    }
+
+    .navbar-header {
+        font-size: 24px;
+        font-weight: 800;
+        margin: auto;
+        padding: 20px 10px;
+        text-transform: uppercase;
+        border-bottom: 1px solid #d3d2d2;
+    }
+
+    #nav-links-container {
+        max-height: 100%;
+        overflow: auto;
+        border: none;
+    }
+
+    .nav-links {
+        padding: 10px 25px;
+        border: 1px solid #d3d2d2;
+        
+}/* MEDIA QUERY END*/
