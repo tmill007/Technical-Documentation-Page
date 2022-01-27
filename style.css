@@ -37,6 +37,7 @@ code p {
     font-size: 14px;
 }
 
+
 /* NAVIGATION & HEADING */
 
 #navbar {
@@ -105,7 +106,8 @@ code p {
 /* ARTICLE SECTION */
 
 article {
-    padding-left: 20px;
+    margin: auto;
+    
 }
 
 article ul {
@@ -161,6 +163,9 @@ article ul {
         
     }
     
+    article {
+        padding-left: 20px;
+    }
     
 
 }/* MEDIA QUERY END*/
